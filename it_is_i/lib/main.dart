@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,21 +23,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Main(),
+      initialRoute: '/',
+      //a map containing my routes for each page
+      routes: {
+        '/': (context) => Home(),
+      },
     );
-  }
-}
-
-class Main extends StatefulWidget {
-  const Main({Key? key}) : super(key: key);
-
-  @override
-  _MainState createState() => _MainState();
-}
-
-class _MainState extends State<Main> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
