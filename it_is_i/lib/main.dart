@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:it_is_i/achievementsPage.dart';
+import 'package:it_is_i/bioInfoPage.dart';
+import 'package:it_is_i/educationPage.dart';
+import 'package:it_is_i/employmentPage.dart';
+import 'package:it_is_i/hobbiesPage.dart';
+import 'certificationPage.dart';
 import 'home.dart';
 
 void main() {
@@ -27,6 +33,12 @@ class MyApp extends StatelessWidget {
       //a map containing my routes for each page
       routes: {
         '/': (context) => Home(),
+        '/first': (context) => BioInformation(),
+        '/second': (context) => Education(),
+        '/third': (context) => EmploymentInfo(),
+        '/fourth': (context) => Certification(),
+        '/fifth': (context) => Achievements(),
+        '/sixth': (context) => Hobbies(),
       },
     );
   }
