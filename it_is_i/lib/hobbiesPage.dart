@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'constants.dart';
 
 class Hobbies extends StatelessWidget {
   const Hobbies({Key? key}) : super(key: key);
@@ -6,8 +7,12 @@ class Hobbies extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff132025),
       appBar: AppBar(
-        title: Text('My Hobbies'),
+        title: Text(
+          'My Hobbies',
+          style: kPageTitle,
+        ),
         backgroundColor: Color(0xff03141b),
       ),
       body: SafeArea(

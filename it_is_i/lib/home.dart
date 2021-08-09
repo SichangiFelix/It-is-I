@@ -8,7 +8,10 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Portfolio'),
+        title: Text(
+          'My Portfolio',
+          style: kPageTitle,
+        ),
         backgroundColor: Color(0xff03141b),
       ),
       backgroundColor: Color(0xff132025),
