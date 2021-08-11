@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 
 const kAvatarTitle = TextStyle(
   fontSize: 20.0,
+  fontFamily: 'Quattrocento Sans',
   fontWeight: FontWeight.w700,
   color: Colors.white70,
 );
 const kContactInfo = TextStyle(
   fontSize: 13.0,
+  fontFamily: 'Quattrocento Sans',
   fontWeight: FontWeight.w400,
   color: Colors.white70,
 );
 const kSelectiveCards = TextStyle(
   fontSize: 15.0,
+  fontFamily: 'Quattrocento Sans',
   fontWeight: FontWeight.w400,
   color: Colors.white70,
 );
