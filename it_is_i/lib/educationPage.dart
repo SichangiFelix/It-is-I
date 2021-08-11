@@ -18,7 +18,28 @@ class Education extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              EducationCard(),
+              EducationCard(
+                institutionName: 'Kenyatta University',
+                yearOfStudy: '2019-2023',
+                honorsReceived:
+                    'Bachelor of Science Degree in Computer Science\n'
+                    '\n'
+                    'Principal areas of study  include: artificial intelligence, computer systems and networks, security, database systems, human computer interaction, vision and graphics, numerical analysis, programming languages, software engineering, bioinformatics and theory of computing.',
+              ),
+              EducationCard(
+                institutionName: 'Friends School Kamusinga',
+                yearOfStudy: '2015-2018',
+                honorsReceived: 'Certificate of Secondary education\n'
+                    '\n'
+                    'Principal areas of study  include: artificial intelligence, computer systems and networks, security, database systems, human computer interaction, vision and graphics, numerical analysis, programming languages, software engineering, bioinformatics and theory of computing.',
+              ),
+              EducationCard(
+                institutionName: 'Lugulu Boarding Primary School',
+                yearOfStudy: '2006-2014',
+                honorsReceived: 'Certificate of Primary Education\n'
+                    '\n'
+                    'Principal areas of study  include: artificial intelligence, computer systems and networks, security, database systems, human computer interaction, vision and graphics, numerical analysis, programming languages, software engineering, bioinformatics and theory of computing.',
+              ),
             ],
           ),
         ),
@@ -58,6 +79,7 @@ class EducationCard extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
+            flex: 1,
             child: Row(
               children: [
                 //logo section
@@ -66,17 +88,24 @@ class EducationCard extends StatelessWidget {
                   child: Container(
                     width: 100.0,
                     height: 100.0,
-                    child: new Image.asset('images/Kamusinga.jpg'),
+                    //child: AssetImage('images/Kamusinga.jpg'),
                   ),
                 ),
                 Expanded(
                   flex: 2,
                   child: Container(
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Kenyatta University'),
-                        Text('2019-2023'),
+                        Text(
+                          institutionName,
+                          style: kInstitutionNameText,
+                        ),
+                        Text(
+                          yearOfStudy,
+                          style: kInstitutionNameText,
+                        ),
                       ],
                     ),
                   ),
@@ -85,8 +114,12 @@ class EducationCard extends StatelessWidget {
             ),
           ),
           Expanded(
+            flex: 2,
             child: Container(
-              child: Text('Bachelor of Science Degree in Biology'),
+              child: Text(
+                honorsReceived,
+                style: kHonorsText,
+              ),
             ),
           ),
         ],
@@ -94,3 +127,17 @@ class EducationCard extends StatelessWidget {
     );
   }
 }
+
+const kInstitutionNameText = TextStyle(
+  fontSize: 22.0,
+  fontWeight: FontWeight.w500,
+  fontFamily: 'Quattrocento Sans',
+  color: Colors.white60,
+);
+
+const kHonorsText = TextStyle(
+  fontSize: 16.0,
+  fontWeight: FontWeight.w300,
+  fontFamily: 'Quattrocento Sans',
+  color: Colors.white60,
+);
