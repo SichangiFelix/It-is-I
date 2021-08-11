@@ -66,6 +66,8 @@ flutter:
     - family: Courgette
       fonts:
         - asset: fonts/Courgette-Regular.ttf
-
+    - family: Quattrocento Sans
+      fonts:
+        - asset: fonts/QuattrocentoSans-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

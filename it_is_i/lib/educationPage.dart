@@ -25,6 +25,7 @@ class Education extends StatelessWidget {
                     'Bachelor of Science Degree in Computer Science\n'
                     '\n'
                     'Principal areas of study  include: artificial intelligence, computer systems and networks, security, database systems, human computer interaction, vision and graphics, numerical analysis, programming languages, software engineering, bioinformatics and theory of computing.',
+                imageResource: 'images/KU logo.png',
               ),
               EducationCard(
                 institutionName: 'Friends School Kamusinga',
@@ -32,6 +33,7 @@ class Education extends StatelessWidget {
                 honorsReceived: 'Certificate of Secondary education\n'
                     '\n'
                     'Principal areas of study  include: artificial intelligence, computer systems and networks, security, database systems, human computer interaction, vision and graphics, numerical analysis, programming languages, software engineering, bioinformatics and theory of computing.',
+                imageResource: 'images/Kamusinga.jpg',
               ),
               EducationCard(
                 institutionName: 'Lugulu Boarding Primary School',
@@ -39,6 +41,7 @@ class Education extends StatelessWidget {
                 honorsReceived: 'Certificate of Primary Education\n'
                     '\n'
                     'Principal areas of study  include: artificial intelligence, computer systems and networks, security, database systems, human computer interaction, vision and graphics, numerical analysis, programming languages, software engineering, bioinformatics and theory of computing.',
+                imageResource: 'images/ministry.webp',
               ),
             ],
           ),
@@ -49,17 +52,18 @@ class Education extends StatelessWidget {
 }
 
 class EducationCard extends StatelessWidget {
-  final String institutionName, yearOfStudy, honorsReceived;
+  final String institutionName, yearOfStudy, honorsReceived, imageResource;
 
   EducationCard(
       {required this.institutionName,
       required this.yearOfStudy,
-      required this.honorsReceived});
+      required this.honorsReceived,
+      required this.imageResource});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 250.0,
+      height: 280.0,
       margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
       padding: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
@@ -86,9 +90,13 @@ class EducationCard extends StatelessWidget {
                 Expanded(
                   flex: 1,
                   child: Container(
-                    width: 100.0,
-                    height: 100.0,
-                    //child: AssetImage('images/Kamusinga.jpg'),
+                    margin: EdgeInsets.all(10.0),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(imageResource),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                 ),
                 Expanded(
@@ -136,7 +144,7 @@ const kInstitutionNameText = TextStyle(
 );
 
 const kHonorsText = TextStyle(
-  fontSize: 16.0,
+  fontSize: 18.0,
   fontWeight: FontWeight.w300,
   fontFamily: 'Quattrocento Sans',
   color: Colors.white60,
