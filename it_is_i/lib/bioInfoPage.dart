@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:it_is_i/constants.dart';
 
@@ -67,7 +68,7 @@ class BioInfoTabs extends StatelessWidget {
 
 //constants for styling the text on this page
 const kBioText = TextStyle(
-  fontFamily: 'Courgette',
+  fontFamily: 'Quattrocento Sans',
   fontSize: 18.0,
   color: Colors.blueGrey,
 );
