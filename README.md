@@ -1,3 +1,10 @@
-# Professionnel
+## Professionnel  
 
-Is A self paced project that aims to buid an application for a professional portfolio. The application is majorly static and textual. It is built using Flutter.
+This is a portfolio app built using flutter.  
+The app is aimed at providing a unique experience in presenting your professional data to:  
+
+- Employers
+- Collaborators
+- Supervisors  
+- Peers  
+- Social media platforms
